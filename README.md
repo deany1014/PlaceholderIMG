@@ -21,6 +21,18 @@ Each image has your own **custom label**, the **dimensions**, the **file type**,
 - Custom colors and a custom font if you want them
 - Interactive mode if you'd rather not remember any options
 
+## Download (Windows)
+
+Don't want to install Python? Download `placeholder.exe` from the [latest release](../../releases/latest) and run it from a terminal:
+
+```powershell
+.\placeholder.exe "Hero Image" "Team Photo:800x600"
+```
+
+Double-clicking the exe starts the interactive mode. The font is bundled inside the exe, so no internet connection is needed.
+
+> Windows SmartScreen or your antivirus may warn about the exe, because it's an unsigned PyInstaller build. If you'd rather not trust it, run the Python script directly instead (see below).
+
 ## Installation
 
 Requires Python 3.8+.
@@ -88,6 +100,28 @@ python placeholder.py "Product Photo:1000x1000" --bg "#1a1a2e" --fg "#eaeaea" --
 - If the font can't be downloaded (no internet), the script falls back to Arial Black / Arial Bold / DejaVu Bold if available. You can also download `Poppins-Black.ttf` yourself and put it in `fonts/`, or point to any font with `--font`.
 - Layout is tuned for 1920x1080 and scaled proportionally for other sizes.
 
+## Releasing a new version
+
+A GitHub Action (`.github/workflows/release.yml`) builds `placeholder.exe` with PyInstaller and attaches it to a GitHub release whenever you push a version tag:
+
+```bash
+git tag v1.0.0
+git push origin v1.0.0
+```
+
+You can also run the workflow manually from the **Actions** tab to test the build. In that case the exe is available as a build artifact, and no release is created.
+
 ## Credits
 
 Font: [Poppins](https://github.com/itfoundry/Poppins) by Indian Type Foundry, licensed under the [SIL Open Font License 1.1](https://openfontlicense.org/).
+
+## License
+`This is free and unencumbered software released into the public domain.`
+
+`Anyone is free to copy, modify, publish, use, compile, sell, or distribute this software, either in source code form or as a compiled binary, for any purpose, commercial or non-commercial, and by any means.`
+
+`In jurisdictions that recognize copyright laws, the author or authors of this software dedicate any and all copyright interest in the software to the public domain. We make this dedication for the benefit of the public at large and to the detriment of our heirs and successors. We intend this dedication to be an overt act of relinquishment in perpetuity of all present and future rights to this software under copyright law.`
+
+`THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.`
+
+[`For more information, please refer to https://unlicense.org`](https://unlicense.org)
