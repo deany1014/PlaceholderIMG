@@ -97,7 +97,7 @@ python placeholder.py "Product Photo:1000x1000" --bg "#1a1a2e" --fg "#eaeaea" --
 
 - Sizes must be between 16 and 10,000 px.
 - Labels are always rendered in uppercase.
-- If the font can't be downloaded (no internet), the script falls back to Arial Black / Arial Bold / DejaVu Bold if available. You can also download `Poppins-Black.ttf` yourself and put it in `fonts/`, or point to any font with `--font`.
+- If the font can't be downloaded (no internet), the script falls back to Arial Black / Arial Bold / DejaVu Bold if available. You can also download `Poppins-Black.ttf` yourself and put it in `fonts/`, or point to any font with `--font`. (Not applicable for the .exe version.)
 - Layout is tuned for 1920x1080 and scaled proportionally for other sizes.
 
 ## Releasing a new version
