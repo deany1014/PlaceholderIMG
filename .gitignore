@@ -1,0 +1,8 @@
+# Downloaded font cache and generated output
+fonts/
+placeholders/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
