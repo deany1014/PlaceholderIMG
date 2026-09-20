@@ -38,8 +38,8 @@ Double-clicking the exe starts the interactive mode. The font is bundled inside 
 Requires Python 3.8+.
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo>.git
-cd <your-repo>
+git clone https://github.com/deany1014/PlaceholderIMG.git
+cd PlaceholderIMG
 pip install -r requirements.txt
 ```
 
